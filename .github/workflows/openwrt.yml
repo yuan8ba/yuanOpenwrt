@@ -41,7 +41,7 @@ jobs:
         # Daed 主程序
         src-git daed https://github.com/daeuniverse/daed.git
         # Daed 的 LuCI 界面
-        src-git luci_app_daed https://github.com/daeuniverse/luci-app-daed.git
+        src-git luci-app-daed https://github.com/daeuniverse/luci-app-daed.git
         # Passwall2（你提供的仓库）
         src-git passwall2 https://github.com/Openwrt-Passwall/openwrt-passwall2.git
         EOF
