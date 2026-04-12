@@ -39,7 +39,7 @@ jobs:
         src-git telephony https://github.com/openwrt/telephony.git
         src-git video https://github.com/openwrt/video.git
         src-git daed https://github.com/daeuniverse/daed.git
-        src-git luci-app-daed https://github.com/daeuniverse/luci-app-daed.git
+        src-git luci_app_daed https://github.com/daeuniverse/luci-app-daed.git
         src-git passwall2 https://github.com/Openwrt-Passwall/openwrt-passwall2.git
         """)
         with open('openwrt/feeds.conf.default', 'w', encoding='utf-8') as f:
