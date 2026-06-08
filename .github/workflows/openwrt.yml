@@ -3,6 +3,7 @@ name: OpenWrt x86_64 Daed + Passwall2 Build
 on:
   workflow_dispatch:
   push:
+    #自动执行开
     # branches:
     #   - main
     tags:
