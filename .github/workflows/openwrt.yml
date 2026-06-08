@@ -77,8 +77,14 @@ jobs:
         CONFIG_KERNEL_XDP_SOCKETS=y
         CONFIG_PACKAGE_kmod-xdp-sockets-diag=y
         EOF
-        make defconfig    
+        make defconfig       
+    - name: 下载依赖
+      run: |
+        cd openwrt
         make download -j8
+    - name: 开始编译
+      run: |
+        cd openwrt
         make -j$(nproc) || make -j1 V=s
 
     - name: Upload Artifact
