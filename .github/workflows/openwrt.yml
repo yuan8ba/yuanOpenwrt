@@ -5,10 +5,15 @@ on:
   push:
     branches:
       - main
+    tags:
+      - 'v*'
 
 jobs:
   build:
     runs-on: ubuntu-24.04
+    # 必须赋予写权限，否则无法创建 Release
+    permissions:
+      contents: write
 
     steps:
     - name: Checkout
@@ -80,3 +85,11 @@ jobs:
       with:
         name: OpenWrt-x86_64-Daed-Passwall2
         path: openwrt/bin/targets
+       # 3. 发布到 GitHub Releases
+    - name: Create Release and Upload Assets
+      uses: softprops/action-gh-release@v2
+      with:
+        # 要上传的文件路径，支持通配符
+        files: dist/my-package-*.tar.gz
+        # 自动根据 commit 记录生成 Release 日志
+        generate_release_notes: true
