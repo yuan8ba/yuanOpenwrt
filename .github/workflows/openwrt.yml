@@ -97,6 +97,8 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         # 要上传的文件路径，支持通配符
-        files: dist/my-package-*.tar.gz
-        # 自动根据 commit 记录生成 Release 日志
+        files: |
+          openwrt/bin/targets/*/*/*.img.gz
+          openwrt/bin/targets/*/*/*-sysupgrade.bin
+          openwrt/bin/targets/*/*/*.manifest
         generate_release_notes: true
