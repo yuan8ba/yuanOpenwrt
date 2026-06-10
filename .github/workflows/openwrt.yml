@@ -101,4 +101,5 @@ jobs:
           openwrt/bin/targets/*/*/*.img.gz
           openwrt/bin/targets/*/*/*-sysupgrade.bin
           openwrt/bin/targets/*/*/*.manifest
+          openwrt/bin/targets/*/*/*.vhdx*
         generate_release_notes: true
