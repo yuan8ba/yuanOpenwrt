@@ -63,11 +63,10 @@ jobs:
         # CONFIG_TARGET_ROOTFS_CPIOGZ is not set
         # CONFIG_TARGET_ROOTFS_TARGZ is not set
         # 开启 Hyper-V VHDX 镜像输出
-        CONFIG_TARGET_IMAGES_VHDX=y         
-        CONFIG_TARGET_IMAGE_VHDX_SIZE=1024  
-        # 推荐的 rootfs 类型（VHDX 通常基于 ext4）
-        CONFIG_TARGET_ROOTFS_SQUASHFS=y
-        #CONFIG_TARGET_ROOTFS_EXT4FS=y
+        CONFIG_VHDX_IMAGES=y
+        # CONFIG_TARGET_ROOTFS_EXT4FS is not set
+        # CONFIG_PACKAGE_gzip is not set
+        
         # 修改分区大小 (单位: MiB)
         CONFIG_TARGET_KERNEL_PARTSIZE=200
         CONFIG_TARGET_ROOTFS_PARTSIZE=300
