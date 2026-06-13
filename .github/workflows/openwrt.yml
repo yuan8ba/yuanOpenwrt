@@ -30,6 +30,7 @@ jobs:
         git clone https://github.com/openwrt/openwrt.git -b v25.12.4 openwrt
         cd openwrt
         git clone https://github.com/QiuSimons/luci-app-daed package/dae
+        git clone https://github.com/kenzok8/openwrt-clashoo.git package/openwrt-clashoo
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         # 移除 openwrt feeds 自带的核心库
@@ -74,6 +75,7 @@ jobs:
         EOF
         
         cat > .config << 'EOF'
+        CONFIG_PACKAGE_luci-app-clashoo=y
         CONFIG_TARGET_x86=y
         CONFIG_TARGET_x86_64=y
         CONFIG_TARGET_x86_64_DEVICE_generic=y
