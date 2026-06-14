@@ -63,7 +63,7 @@ jobs:
         # 开发者选项与 BPF 工具链
         CONFIG_DEVEL=y
         CONFIG_BPF_TOOLCHAIN_HOST=y
-        CONFIG_BPF_TOOLCHAIN_HOST_PATH="/usr/lib/llvm-21/bin"
+        CONFIG_BPF_TOOLCHAIN_HOST_PATH="/usr/lib/llvm-18/bin"
         # 内核 BPF/XDP 核心支持 (daed, PassWall 优化)
         CONFIG_KERNEL_DEBUG_INFO=y
         CONFIG_KERNEL_DEBUG_INFO_BTF=y
